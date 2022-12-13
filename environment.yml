@@ -1,0 +1,48 @@
+name: rv-dev
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+  # - fastai
+dependencies:
+  - numpy
+  - pillow
+  - torch
+  - torchvision
+  - tensorboard
+  - albumentations
+  - cython
+  - pycocotools
+  - psutil
+  - triangle
+  - opencv-python
+  - opencv-python-headless
+  - matplotlib
+  - tqdm
+  - click
+pydantic
+typing_extensions
+everett
+everett[ini]
+six
+tqdm
+pygeos
+shapely
+geopandas
+numpy
+pillow
+pyproj
+rasterio
+imageio
+pystac
+scikit-learn
+scipy
+opencv-python
+opencv-python-headless
+tqdm
+
+
+  - pip:
+      - -e . # install git checkout of vhh_e_dispo in editable mode
+
+  
