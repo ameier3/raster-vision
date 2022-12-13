@@ -5,6 +5,7 @@ channels:
   - defaults
   # - fastai
 dependencies:
+  - python=3.9
   - numpy
   - pillow
   - torch
@@ -24,21 +25,15 @@ dependencies:
   - typing_extensions
   - everett
   - six
-  - tqdm
   - pygeos
   - shapely
   - geopandas
-  - numpy
-  - pillow
   - pyproj
   - rasterio
   - imageio
   - pystac
   - scikit-learn
   - scipy
-  - opencv-python
-  - opencv-python-headless
-  - tqdm
   - pip:
       - -e . # install git checkout of current directory in editable mode
 
