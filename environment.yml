@@ -5,36 +5,48 @@ channels:
   - defaults
   # - fastai
 dependencies:
-  - python=3.9
-  - numpy
-  - pillow
-  - torch
-  - torchvision
-  - tensorboard
   - albumentations
+  - click
   - cython
-  - pycocotools
-  - psutil
-  - triangle
+  - everett
+  - geopandas
+  - imageio
+  - matplotlib
+  - numpy
   - opencv-python
   - opencv-python-headless
-  - matplotlib
-  - tqdm
-  - click
+  - pillow
+  - psutil
+  - pycocotools
   - pydantic
-  - typing_extensions
-  - everett
-  - six
   - pygeos
-  - shapely
-  - geopandas
   - pyproj
-  - rasterio
-  - imageio
   - pystac
+  - python=3.9
+  - rasterio
   - scikit-learn
   - scipy
+  - shapely
+  - six
+  - tensorboard
+  - torch
+  - torchvision
+  - tqdm
+  - triangle
+  - typing_extensions
   - pip:
       - -e . # install git checkout of current directory in editable mode
+# From the requirements-dev.txt
+  - codecov
+  - coverage
+  - flake8
+  - jupyter
+  - jupyter_contrib_nbextensions
+  - jupyterlab
+  - moto
+  - seaborn
+  - sphinx-autobuild
+  - unify
+  - yapf
 
   
