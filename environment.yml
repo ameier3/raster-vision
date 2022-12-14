@@ -1,21 +1,27 @@
 name: rv-dev
 channels:
-  - pytorch
+  # - fastchan
   - conda-forge
+  - pytorch
+  - nvidia
   - defaults
   # - fastai
 dependencies:
   - albumentations
   - click
+  - configobj # required for everett[ini]
   - cython
   - everett
+  - gdal=3.5.2
   - geopandas
   - imageio
   - matplotlib
-  - numpy
-  - opencv-python
-  - opencv-python-headless
+  - numpy=1.23
+  # - opencv=4.6.0
+  # - opencv-python
+  # - opencv-python-headless
   - pillow
+  - pip
   - psutil
   - pycocotools
   - pydantic
@@ -29,12 +35,22 @@ dependencies:
   - shapely
   - six
   - tensorboard
-  - torch
+  # - torch
+  - pytorch
+  - pytorch-cuda=11.6
   - torchvision
   - tqdm
   - triangle
   - typing_extensions
   - pip:
+      # Order taken from https://docs.rastervision.io/en/latest/release.html
+      - -e ./rastervision_pipeline
+      - -e ./rastervision_aws_s3
+      - -e ./rastervision_aws_batch
+      - -e ./rastervision_core
+      - -e ./rastervision_pytorch_learner
+      - -e ./rastervision_pytorch_backend
+      - -e ./rastervision_gdal_vsi
       - -e . # install git checkout of current directory in editable mode
 # From the requirements-dev.txt
   - codecov
