@@ -8,6 +8,7 @@ channels:
   # - fastai
 dependencies:
   - albumentations
+  - boto3
   - click
   - configobj # required for everett[ini]
   - cython
@@ -42,16 +43,6 @@ dependencies:
   - tqdm
   - triangle
   - typing_extensions
-  - pip:
-      # Order taken from https://docs.rastervision.io/en/latest/release.html
-      - -e ./rastervision_pipeline
-      - -e ./rastervision_aws_s3
-      - -e ./rastervision_aws_batch
-      - -e ./rastervision_core
-      - -e ./rastervision_pytorch_learner
-      - -e ./rastervision_pytorch_backend
-      - -e ./rastervision_gdal_vsi
-      - -e . # install git checkout of current directory in editable mode
 # From the requirements-dev.txt
   - codecov
   - coverage
@@ -59,10 +50,23 @@ dependencies:
   - jupyter
   - jupyter_contrib_nbextensions
   - jupyterlab
-  - moto
+  # - moto # Do not install! Will break jupyter due to req: sonschema ~=3.2
   - seaborn
   - sphinx-autobuild
   - unify
   - yapf
+# owns
+  - spyder
+  - spyder-kernels
+  # - pip:
+  #     # Order taken from https://docs.rastervision.io/en/latest/release.html
+  #     - "--no-deps -e ./rastervision_pipeline"
+  #     - "--no-deps -e ./rastervision_aws_s3"
+  #     - "--no-deps -e ./rastervision_aws_batch"
+  #     - "--no-deps -e ./rastervision_core"
+  #     - "--no-deps -e ./rastervision_pytorch_learner"
+  #     - "--no-deps -e ./rastervision_pytorch_backend"
+  #     - "--no-deps -e ./rastervision_gdal_vsi"
+  #     - "--no-deps -e ."  # install git checkout of current directory in editable mode
 
   
